@@ -6,7 +6,7 @@ echo "Enter a phrase: "
 read phrase
 
 #count words and whitespaces in phrases 
-word_count=$(echo $phrases | wc -w)
+word_count=$(echo $phrase | wc -w)
 space_count=$(expr length "$phrase" - length `echo "$phrase" | sed "s/ //g"`)
 
 #output 
