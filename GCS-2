@@ -1,0 +1,15 @@
+#!/bin/bash
+#Write a shell script that asks the user to type a phrase, then tells the user the number of words in the phrase and the number of white spaces. The expected output;The number of words is 4, The number of white spaces is 3  
+
+#A script that asks the user to type a phrase
+echo "Enter a phrase : "
+read phrase
+echo "Typed phrases : $phrase"
+
+#count words and whitespaces in phrases 
+word_count=$(echo $phrases | wc -w)
+space_count=$(expr lenght "$phrase" - lenght `echo "$phrase" | sed "s/ //g"`)
+
+#output 
+echo "The number of words is $word_count"
+echo "The number of whitespaces is $space_count"
